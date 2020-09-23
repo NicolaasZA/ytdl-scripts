@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+VIDURL=${1?Error: no video url provided}
+
+youtube-dl --ignore-errors --output "%(title)s.%(ext)s" --no-playlist --extract-audio --audio-format mp3 $VIDURL
